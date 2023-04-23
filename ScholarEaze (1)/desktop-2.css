@@ -96,31 +96,31 @@
   box-shadow: 0 0 6px 4px rgba(229, 229, 229, 0.8);
   box-sizing: border-box;
   height: 65px;
+  font-size: 20px;
+  font-weight: bold;
+  width: 210px;
+  height: 62px;
 }
 .rectangle-button {
-  left: 516px;
+  left: 547px;
   width: 220px;
 }
 .desktop-2-child1 {
-  left: 760px;
+  left: 791px;
 }
 .desktop-2-child2 {
-  left: 1004px;
+  left: 1040px;
 }
 .desktop-2-child3 {
-  left: 1245px;
+  left: 1279px;
   width: 183px;
 }
 .desktop-2-child4 {
-  left: 28px;
-  width: 210px;
-  height: 62px;
-  font-weight: bold;
-  font-size: 28px;
+  left: 53px;
 }
 .desktop-2-child5 {
   width: 220px;
-  left: 272px;
+  left: 294px;
 }
 .category,
 .course,
