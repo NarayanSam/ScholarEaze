@@ -47,8 +47,8 @@
       ><button class="desktop-2-child5"></button>-->
       <label class="desktop-2-child4" for="dropdown-menu1">Gender</label>
     
-      <select class="desktop-2-child4" name="dropdown-menu1" id="dropdown-menu1">
-        <option class="gender" selected disabled>Gender</option>
+      <select class="desktop-2-child4" name="dropdown-menu1" id="dropdown-menu1" required>
+        <option class="" selected disabled hidden>Gender</option>
         <option class="gender" value="male">Male</option>
         <option value="Female" class="gender">Female</option>
       </select>
@@ -167,11 +167,12 @@
       /><button class="desktop-2-child7"></button>
       <div class="login">Login</div>
     </div>
+    <div id="third">
     <div class="rectangle-parent">
-      <div class="frame-child"></div>
+      <div class="frame-child1"></div>
       <div class="name" id="name1"></div>
-      <div class="frame-item"></div>
-      <nav class="frame-inner"></nav>
+      <div class="frame-item1"></div>
+      <nav class="frame-inner1"></nav>
       <a class="more-details"></a>
       <img class="image-2-icon" alt="" src="" />
 
@@ -180,10 +181,10 @@
       <p id="money1" class="money"></p>
     </div>
     <div class="rectangle-parent">
-      <div class="frame-child"></div>
+      <div class="frame-child1"></div>
       <div id="name2" class="name"></div>
-      <div class="frame-item"></div>
-      <nav class="frame-inner"></nav>
+      <div class="frame-item1"></div>
+      <nav class="frame-inner1"></nav>
       <a class="more-details"></a>
       <img class="image-2-icon" alt="" src="" />
 
@@ -191,26 +192,41 @@
       <label id="provided2" class="provided"></label>
       <p id="money2" class="money"></p>
     </div>
-    <div id="name2"></div>
-    <div id="deadline2"></div>  
-    <div id="provided2"></div> 
-    <div id="money2"></div>
-    <div id="name3"></div>
-    <div id="deadline3"></div>  
-    <div id="provided3"></div> 
-    <div id="money3"></div>
-    <div id="name4"></div>
-    <div id="deadline4"></div>  
-    <div id="provided4"></div> 
-    <div id="money4"></div>
-    <div id="name5"></div>
-    <div id="deadline5"></div>  
-    <div id="provided5"></div> 
-    <div id="money5"></div>
+    <div class="rectangle-parent">
+      <div class="frame-child1"></div>
+      <div id="name3" class="name"></div>
+      <div class="frame-item1"></div>
+      <nav class="frame-inner1"></nav>
+      <a class="more-details"></a>
+      <img class="image-2-icon" alt="" src="" />
 
+      <span id="deadline3" class="deadline"></span>
+      <label id="provided3" class="provided"></label>
+      <p id="money3" class="money"></p>
+    </div>
+    <div class="rectangle-parent">
+      <div class="frame-child1"></div>
+      <div id="name4" class="name"></div>
+      <div class="frame-item1"></div>
+      <nav class="frame-inner1"></nav>
+      <a class="more-details"></a>
+      <img class="image-2-icon" alt="" src="" />
+
+      <span id="deadline4" class="deadline"></span>
+      <label id="provided4" class="provided"></label>
+      <p id="money4" class="money"></p>
+    </div>
+  </div>
 
    <script>
+      
       function getOption(){
+        var targetDiv = document.getElementById("third");
+        if (targetDiv.style.display == "none") {
+        targetDiv.style.display = "block";
+      } else {
+        targetDiv.style.display = "none";
+      }
     const s=[
         ['FAEA','ALL','ALL','SC/ST','ALL',27000,33,'30 June 2023','Foundation for Academic Excellence and Access','Discretion of FAEA',''],
         ['INSPIRE','ALL','Bachelor','ALL','ALL',600000,75,'31 Jan 2023','Department of Science & Technology','80,000 per year',''],
@@ -218,8 +234,8 @@
         ['Sitaram Jindal Scholarships','ALL','ALL','ALL','ALL',800000,60,'30 June 2023','Sitaram Jindal Foundation','16,800 per year',''],
         ['Pragati','Female','ENG','ALL','ALL',900000,33,'31 December 2023*','AICTE','50,000 per year',''],
         ['Keep India Smiling Foundation','ALL','Bachelor','ALL','ALL',500000,60,'31 March 2023','Colgate','30,000 per year',''],
-        ['HDFC Bank Parivartan’s ECS Scholarship Beyond School Programme','ALL','Bachelor','ALL','ALL',250000,55,'15 March 2023','HDFC','30,000 per year',''],
-        ['HDFC Bank Parivartan’s ECS Scholarship Professional Education Programme','ALL','B.tech','ALL','ALL',250000,55,'15 March 2023','HDFC','50,000 per year',''],
+        ['HDFC Beyond School Programme','ALL','Bachelor','ALL','ALL',250000,55,'15 March 2023','HDFC','30,000 per year',''],
+        ['HDFC Professional Education Programme','ALL','B.tech','ALL','ALL',250000,55,'15 March 2023','HDFC','50,000 per year',''],
         ['IndianOil Educational Scholarship Scheme','ALL','B.Tech','ALL','ALL',100000,65,'15 October 2023*','Indian Oil Corporation','36,000 per year',''],
         ['Siemens Scholarship Program','ALL','B.Tech','ALL','ALL',200000,60,'30 June 2023','Siemens','upto 3 Lakh','']];
         function check(list){
@@ -268,10 +284,10 @@ let provided="provided1";
 let money="money1";
 for(let s=0;s<=sch.length;s++){
 document.getElementById(name).innerHTML = sch[s][0];
-document.getElementById(deadline).innerHTML = sch[s][9];
-document.getElementById(provided).innerHTML = sch[s][7];
-document.getElementById(money).innerHTML = sch[s][8];
-let a=s+1;
+document.getElementById(deadline).innerHTML ="Deadline:"+ sch[s][7];
+document.getElementById(provided).innerHTML ="Provided By:"+ sch[s][8];
+document.getElementById(money).innerHTML = sch[s][9];
+let a=s+2;
 let t=a.toString();
 let N="name";;
 let D="deadline";
@@ -281,10 +297,8 @@ name=N.concat(a);
 deadline=D.concat(a);
 provided=P.concat(a);
 money=M.concat(a);
-}
-k=5;
-name= "name"+k.toString;
 console.log(name);
+}
 }
       var homeText = document.getElementById("homeText");
       if (homeText) {
