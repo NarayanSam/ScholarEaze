@@ -1,10 +1,5 @@
 
-  # ScholarEaze
-
-  Note: Please ensure you have installed <code><a href="https://nodejs.org/en/download/">nodejs</a></code>
-
-  To preview and run the project on your device:
-  1) Open project folder in <a href="https://code.visualstudio.com/download">Visual Studio Code</a>
-  2) In the terminal, run `npm install`
-  3) Run `npm start` to view project in browser
-  
+ScholarEaze is a website that provides information about scholarships that match a student's 
+qualifications and interests. By aggregating and presenting relevant scholarship opportunities
+in a user-friendly manner, the website can help students navigate the complex scholarship
+landscape and increase their chances of securing financial aid for their education.
