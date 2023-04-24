@@ -48,7 +48,7 @@
       <label class="desktop-2-child4" for="dropdown-menu1">Gender</label>
     
       <select class="desktop-2-child4" name="dropdown-menu1" id="dropdown-menu1" required>
-        <option value="" selected disabled hidden>Gender</option>
+        <option value="" class="gender" selected disabled hidden>Gender</option>
         <option class="gender" value="male">Male</option>
         <option value="Female" class="gender">Female</option>
       </select>
@@ -158,70 +158,91 @@
         alt=""
         src="./public/gridiconsdropdown1.svg"
       />-->
-      <button onclick="getOption()" class="desktop-2-child6" id="rectangleButton6">Submit</button>
+      <button onclick="getOption()" class="desktop-2-child6" >Submit</button>
       <!--<div class="submit">Submit</div>-->
-      <img class="icon" alt="" src="./public/1092499-1490-1@2x.png" /><img
+      <img class="icon" id="p" style="display: block;" alt="" src="pen.png" /><!--<img
         class="group-icon"
         alt=""
         src="./public/group.svg"
-      /><button class="desktop-2-child7"></button>
+      />--><button class="desktop-2-child7"></button>
       <div class="login">Login</div>
     </div>
-    <div class="rectangle-parent">
-      <div class="frame-child"></div>
-      <div id="name1"></div>
-      <div class="frame-item"></div>
-      <nav class="frame-inner"></nav>
-      <a class="more-details">more details</a>
-      <img class="image-2-icon" alt="" src="./public/image-2@2x.png" />
+    <div id="third" style="display:none;">
 
-      <span id="deadline1"></span>
-      <label id="provided1"></label>
-      <p id="money1"></p>
-    </div>
-    <div id="name2"></div>
-    <div id="deadline2"></div>  
-    <div id="provided2"></div> 
-    <div id="money2"></div>
-    <div id="name3"></div>
-    <div id="deadline3"></div>  
-    <div id="provided3"></div> 
-    <div id="money3"></div>
-    <div id="name4"></div>
-    <div id="deadline4"></div>  
-    <div id="provided4"></div> 
-    <div id="money4"></div>
-    <div id="name5"></div>
-    <div id="deadline5"></div>  
-    <div id="provided5"></div> 
-    <div id="money5"></div>
+      <div class="frame-child1"></div>
+      <div class="name" id="name1"></div>
+      <div class="frame-item1"></div>
+      <nav class="frame-inner1"></nav>
+      <a class="more-details">More Details</a>
+      <img class="image-2-icon" id="image-2-icon" alt="" src=" " />
 
+      <span id="deadline1" class="deadline" ></span>
+      <label id="provided1" class="provided"></label>
+      <p id="money1" class="money"></p>
+    
+      <div class="frame-child2"></div>
+      <div id="name2" class="name2"></div>
+      <div class="frame-item2"></div>
+      <nav class="frame-inner2"></nav>
+      <a class="more-details2">More Details</a>
+      <img class="image-2-icon2" id="image-2-icon2" alt="" src=" " />
 
+      <span id="deadline2" class="deadline2"></span>
+      <label id="provided2" class="provided2"></label>
+      <p id="money2" class="money2"></p>
+
+      <div class="frame-child3"></div>
+      <div id="name3" class="name3"></div>
+      <div class="frame-item3"></div>
+      <nav class="frame-inner3"></nav>
+      <a class="more-details3">More Details</a>
+      <img class="image-2-icon3" id="image-2-icon3" alt="" src=" " />
+
+      <span id="deadline3" class="deadline3"></span>
+      <label id="provided3" class="provided3"></label>
+      <p id="money3" class="money3"></p>
+
+      </div>
 
    <script>
+      
       function getOption(){
+        var x = document.getElementById("third");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+
+  var y = document.getElementById("p");
+  if (y.style.display === "block") {
+    y.style.display = "none";
+  } else {
+    y.style.display = "block";
+  }
+        
     const s=[
-        ['FAEA','ALL','ALL','SC/ST','ALL',27000,33,'30 June 2023','Foundation for Academic Excellence and Access','Discretion of FAEA',''],
-        ['INSPIRE','ALL','Bachelor','ALL','ALL',600000,75,'31 Jan 2023','Department of Science & Technology','80,000 per year',''],
-        ['Ishan Uday Scholarships','ALL','ALL','ALL','NER',700000,33,'15 April 2023 ','Ministry of HRD and UGC','upto 2.5 lakhs',''],
-        ['Sitaram Jindal Scholarships','ALL','ALL','ALL','ALL',800000,60,'30 June 2023','Sitaram Jindal Foundation','16,800 per year',''],
-        ['Pragati','Female','ENG','ALL','ALL',900000,33,'31 December 2023*','AICTE','50,000 per year',''],
-        ['Keep India Smiling Foundation','ALL','Bachelor','ALL','ALL',500000,60,'31 March 2023','Colgate','30,000 per year',''],
-        ['HDFC Bank Parivartan’s ECS Scholarship Beyond School Programme','ALL','Bachelor','ALL','ALL',250000,55,'15 March 2023','HDFC','30,000 per year',''],
-        ['HDFC Bank Parivartan’s ECS Scholarship Professional Education Programme','ALL','B.tech','ALL','ALL',250000,55,'15 March 2023','HDFC','50,000 per year',''],
-        ['IndianOil Educational Scholarship Scheme','ALL','B.Tech','ALL','ALL',100000,65,'15 October 2023*','Indian Oil Corporation','36,000 per year',''],
-        ['Siemens Scholarship Program','ALL','B.Tech','ALL','ALL',200000,60,'30 June 2023','Siemens','upto 3 Lakh','']];
+        ['FAEA','ALL','ALL','SC/ST','ALL',27000,33,'30 June 2023','Foundation for Academic Excellence and Access','Discretion of FAEA','public/faea.png'],
+        ['INSPIRE','ALL','Bachelor','ALL','ALL',600000,75,'31 Jan 2023','Department of Science & Technology','80,000 per year','public/inspire.png'],
+        ['Ishan Uday Scholarships','ALL','ALL','ALL','NER',700000,33,'15 April 2023 ','Ministry of HRD and UGC','upto 2.5 lakhs','public/ishaan.png'],
+        ['Sitaram Jindal Scholarships','ALL','ALL','ALL','ALL',800000,60,'30 June 2023','Sitaram Jindal Foundation','16,800 per year','public/sitaram.png'],
+        ['Pragati','Female','ENG','ALL','ALL',900000,33,'31 December 2023*','AICTE','50,000 per year','public/pragati.png'],
+        ['Keep India Smiling Foundation','ALL','Bachelor','ALL','ALL',500000,60,'31 March 2023','Colgate','30,000 per year','public/colgate.png'],
+        ['HDFC Beyond School Programme','ALL','Bachelor','ALL','ALL',250000,55,'15 March 2023','HDFC','30,000 per year','public/hdfc.jpg.png'],
+        ['HDFC Professional Education Programme','ALL','B.tech','ALL','ALL',250000,55,'15 March 2023','HDFC','50,000 per year','public/hdfc.jpg.png'],
+        ['IndianOil Educational Scholarship Scheme','ALL','B.Tech','ALL','ALL',100000,65,'15 October 2023*','Indian Oil Corporation','36,000 per year','public/indianoil.jfif.png'],
+        ['Siemens Scholarship Program','ALL','B.Tech','ALL','ALL',200000,60,'30 June 2023','Siemens','upto 3 Lakh','public/siemen.png']];
         function check(list){
             let l=[];
             let a=0;
             for(let i=0;i<list.length;i++){
                 const sublist=list[i];
-                if (sublist[5]>=income && sublist[6]<=percent && (sublist[1]==("ALL" || gender)) && (sublist[3]==("ALL" || category)) && (sublist[2]==("ALL"||course)) &&(sublist[4]==("ALL"||state))){
+                if (sublist[5]>=income && sublist[6]<=percent && (sublist[1]==("ALL" || gender)) && (sublist[3]==("ALL" || category)) && (sublist[2]==(course||"ALL")) &&(sublist[4]==("ALL"||state))){
                     l.push(sublist);
                     a++;
                 }
             }
-            
+            console.log([l,a]);
 //document.getElementById("name").innerHTML = "sch[0][0]";
 //document.getElementById("deadline").innerHTML = l[0][7];
 //document.getElementById("provided").innerHTML = l[0][8];
@@ -246,6 +267,13 @@
     selectElement=document.querySelector('#dropdown-menu4')
     percent=selectElement.options[selectElement.selectedIndex].value;
     console.log(percent);
+
+    if(percent!="Percent" && income!="Income" && state!="State" && category!="Category" && gender!="Gender" && course!="Course"){
+          
+
+        }else{
+          alert("one of the field is missing");
+        } 
  
 const CHECk=check(s);
 console.log(CHECk)
@@ -255,15 +283,27 @@ let name="name1";
 let deadline="deadline1";
 let provided="provided1";
 let money="money1";
+let img="image-2-icon";
 for(let s=0;s<=sch.length;s++){
 document.getElementById(name).innerHTML = sch[s][0];
-document.getElementById(deadline).innerHTML = sch[s][9];
-document.getElementById(provided).innerHTML = sch[s][7];
-document.getElementById(money).innerHTML = sch[s][8];
-}
-k=5;
-name= "name"+k.toString;
+document.getElementById(deadline).innerHTML ="Deadline:"+ sch[s][7];
+document.getElementById(provided).innerHTML ="Provided By:"+ sch[s][8];
+document.getElementById(money).innerHTML = sch[s][9];
+document.getElementById(img).src= sch[s][10] ;
+let a=s+2;
+let t=a.toString();
+let N="name";;
+let D="deadline";
+let P="provided";
+let M="money";
+let I="image-2-icon";
+name=N.concat(a);
+deadline=D.concat(a);
+provided=P.concat(a);
+money=M.concat(a);
+img=I.concat(a);
 console.log(name);
+}
 }
       var homeText = document.getElementById("homeText");
       if (homeText) {
